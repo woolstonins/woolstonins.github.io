@@ -1,15 +1,57 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			
-			
-			{{ content }}
-			
-			
-		</body>
-	</html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+	  <title>{{ page.title }}</title>
+      <meta name="description" content="Auto Insurance, Home Insurance, Business Insurance, Life & Health Insurance in Sandy, Draper, South Jordan, Lehi, Alpine and Riverton." />
+      <meta name="keywords" content="Insurance, Auto Insurance, Home Insurance, Car Insurance, Homeowners Insurance, Business Insurance, Commercial Insurance, Ryan Woolston" />
+      <meta name="google-site-verification" content="ryan-woolston-google-verify" />
+      <!-- css -->
+      <!-- google web fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Oswald%7COpen+Sans:400,300%7C' rel='stylesheet' type='text/css' />
+      <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,700' rel='stylesheet' type='text/css' />
+      <!-- styles needed by jScrollPane -->
+      <link type="text/css" href="js/jquery/jscrollpane/css/jquery.jscrollpane.css" rel="stylesheet" media="all" />
+      <!-- styles for jQuery UI -->
+      <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css">
+      </link>
+      <link rel="stylesheet" type="text/css" href="css/cssreset-min.css" />
+      <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+      <!-- shared css -->
+      <link rel="stylesheet" type="text/css" href="css/site.css" />
+      <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+      <!-- color theme -->
+      <link rel="stylesheet" type="text/css" href="css/theme.css" />
+      	  	
+      
+      <!-- jQuery, make sure this is loaded before other javascript -->
+	  <script src="js/jquery.min.js" type="text/javascript"></script>
+	  <script src="js/swipe.js" type="text/javascript"></script>
+	  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQwAGCqyyt16d1g-uVvD4LLoaBtqoqS_o&libraries=places" type="text/javascript"></script>
+
+	  <script src="js/jquery/jscrollpane/jquery.jscrollpane.min.js" type="text/javascript" defer></script>
+      <script src="js/jquery/backstretch/jquery.backstretch.min.js" type="text/javascript" defer></script>
+	  <script src="js/plugins.js" type="text/javascript" defer></script>
+      <script src="js/jquery.jpanelmenu.min.js" type="text/javascript" defer></script>
+	  <script src="js/site.js" type="text/javascript" defer></script>
+
+	  
+   </head>
+   <body id="home-page">
+
+		{{ content }}
+
+		<!-- Organization Schema -->
+		<script type="application/ld+json">
+			{ "@context" : "http://schema.org",
+			"@type" : "Organization",
+			"url" : "http://rjwinsurance.com",
+			"logo": "http://rjwinsurance.com/img/ryan-woolston.jpg",
+			"areaServed" : "Cottonwood Heights, UT, Sandy, UT, Draper, UT, South Jordan, UT, Lehi, UT, Alpine, UT, Riverton, UT, and surrounding areas."
+			}
+		 </script>
+	  </body>
+   </html>
