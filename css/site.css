@@ -1,0 +1,535 @@
+a {
+	color: #0090df;
+}
+
+.form-logo {
+	height: 60px;
+}
+
+br {
+	clear:both;
+}
+
+/******* form ******/
+form {
+	margin: 15px auto;
+	width: 99%;
+}
+
+form h3 {
+	font-size: 24px;
+	color: #0090df;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+h3 > i {
+	color: #454545;
+}
+
+.personal-info, .home-address, .contact-details {
+ margin-bottom: 8px;	background-repeat: no-repeat;
+	height: 27px;
+}
+
+form > div {
+	margin-bottom: 0.5em;
+}
+
+
+.fieldsets:after{
+	content: " ";
+	width: 1px;
+	height:100%;
+	background-color:#CCC;
+	position: absolute;
+	left: 50%;
+}
+.fieldsets {
+	border: 1px solid #d2d2d2;
+	float: left;
+	width: 100%;
+	margin-bottom: 0.5em;
+	position: relative;
+
+}
+
+.fieldsets select{
+	width: 180px;
+}
+
+.fieldsets > div{
+	float: left; 
+	width: 45%;
+ width: 48%\9;	padding: 1%; padding-left: 2%\9;
+ padding-right: 0%\9;
+}
+
+.fieldsets > div:nth-child(even) {
+	float:right;
+}
+
+form h4 {
+	display:block;
+}
+
+form input {
+	width: 90%; max-width: 300px;
+	height: 22px;
+}
+
+.checkbox {
+	display: inline;
+	height: 14px;
+	width: 15px;
+
+}
+
+form .button {
+	display: block;
+	width: 150px;
+}
+
+
+form textarea {
+	width: 90%; max-width: 300px;
+	height: 130px;
+}
+
+form label{
+	display: block;
+}
+
+.products-of-interest {
+	float:left;
+	background-color: #f6f6f6;
+	padding: 1%;
+	margin: 1%;
+	width: 96%;
+}
+.products-of-interest h4 {
+	font-weight: bold;
+}
+
+.products-of-interest label{
+	display:inline;
+	font-weight: normal;
+}
+
+.products-of-interest div {
+	margin: 3px 0;
+	float: left;
+	width: 32%;
+}
+
+.contact-form .button {
+	float: left;
+}
+
+.left-col form input, .left-col form select, .left-col form textarea {
+	margin-bottom: 20px;
+}
+
+.listings, .listing{
+	width: 100%;
+	float: left;
+}
+
+.listing {
+	clear: both;
+	padding:1em 0;
+}
+
+.listing>div{
+	float: left;
+}
+
+.button-div > .hide-bio-link {
+	display: none;
+}
+
+
+#interior-page .site-tree{
+	font-size: 20px;
+}
+
+#interior-page .main .site-tree ul,
+#interior-page .site-tree ul{
+	list-style-type: none;
+	margin: 0 0 0 30px;
+}
+#interior-page .site-tree a{
+	display: inline;
+}
+#interior-page .site-tree ul ul{
+	display:none;
+}
+#interior-page .childless {
+	margin-left: 30px;
+}
+
+.sitemap ul{
+	margin-left: 30px;
+}
+
+
+.nav-container ul.top-product-list, .product-info {
+	
+}
+
+.nav-container .dropdown li, .nav-container .products li {
+	line-height: 30px;
+}
+
+.locations-widget .content{
+	width: 680px;
+}
+
+.locations-widget div.location{
+	margin:10px;
+	background-color: white;
+	float:left;
+	width: 665px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.form-content{
+	margin: 10px;
+}
+
+.required:after{
+	content:'*';
+	color: red;
+	
+}
+
+.related-products {
+	margin-top: 30px;
+}
+
+
+form input,
+form, select
+{
+	margin-bottom: 9px;
+}
+
+.products-of-interest label
+{
+	float: left;
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+.products-of-interest input
+{
+	float: left;
+}
+
+iframe
+{
+	border: 0px;
+}
+
+iframe#requestQuote
+{
+	height: 1550px; 
+	width: 100%;
+}
+
+.geotrust img
+{
+	float: right;
+}
+
+#directionsPage .locationLeft
+{
+	float: left;
+	width: 56%;
+	margin-bottom: 10px;
+}
+
+#directionsPage .locationLeft dt,
+#directionsPage .locationLeft dd
+{
+	font-weight: normal;
+	float: left;
+	line-height: 16px;
+}
+
+#directionsPage .locationLeft dt
+{
+	clear: both;
+}
+
+
+#directionsPage .locationLeft .office-hours
+{
+	clear: both;
+	width: 90%;
+}
+
+#directionsPage .locationLeft .office-hours h4
+{
+	margin: 0px;
+}
+
+#directionsPage .locationImage
+{
+	margin-right: 4%;
+	float: left;
+	max-width: 40%;
+	max-height: 233px;
+	margin-bottom: 10px;
+}
+
+#directionsPage label
+{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#directionsPage .print
+{
+	display: none;
+	padding: 0 26px;
+	margin-bottom: 12px;
+}
+
+#directionsPage .mapImage
+{
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#directionsPage #origin
+{
+	max-width: 300px;
+	width: 90%;
+}
+
+#directionsPage #directionsRenderer
+{
+	padding-bottom: 13px;
+}
+
+#directionsPage form
+{
+	clear: both;
+	padding-bottom: 10px;
+	margin-bottom: 4px;
+	overflow: hidden;
+}
+
+#directionsPage form input
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.related-products li div
+{
+	color: #454545;
+}
+
+.related-products li a
+{
+	width: 100%;
+	height: 100%;
+}
+
+.related-products li a:hover
+{
+	text-decoration: none;
+}
+
+.related-products .viewProductPage
+{
+	color: #0090DF;
+}
+
+.related-products .viewProductPage:hover
+{
+	text-decoration: underline;
+}
+
+.related-products li:hover 
+{
+	background: white;
+}
+
+.contact-form .button
+{
+	margin-top: 10px;
+}
+
+.classic img.adp-marker
+{
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+table#adp-placemark .adp-text,
+.adp-placemark .adp-text
+{
+	width: 600px;
+}
+
+div.site-tree > ul, 
+div.site-tree > ul ul
+{
+	list-style: none !important;
+}
+
+div.sitemap > ul,
+div.sitemap > ul ul
+{
+	list-style: none !important;
+}
+
+.referFriend
+{
+	padding: 5px 10px;
+	padding-bottom: 11px;
+	background: #f8f8f8;
+	border-radius: 5px;
+	line-height: 12px;
+	text-align: center;
+}
+
+.referFriend .friends
+{
+	background: url("graphics/friends.png") repeat scroll 0 0 transparent;
+	display: inline-block;
+	height: 18px;
+	left: 0;
+	position: relative;
+	top: 3px;
+	width: 24px;
+}
+
+.referFriend a
+{
+	font-family: arial;
+	font-size: 18px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.referFriend a .icon-user
+{
+	color: #333;
+}
+
+.referForm
+{
+	overflow: hidden;
+}
+
+.referForm .leftForm
+{
+	float:  left;
+	width: 49%;
+	margin-right: 2%;
+}
+
+.referForm .rightForm
+{
+	float: left;
+	width: 49%;
+}
+
+.referForm .button
+{
+	margin-left: 10px;
+	margin-bottom: 16px;
+}
+
+.staffPage h2
+{
+	clear: both;
+	margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 720px)
+{
+
+	.contact-form .fieldsets > div
+	{
+		width: 94%;
+	}
+
+	.fieldsets:after
+	{
+		content: none;
+	}
+
+	.contact-form .button 
+	{
+    		margin-left: auto;
+    		margin-right: auto;
+		float: none;
+	}
+
+	.fieldsets
+	{
+		border: 0px;
+	}
+
+	.fieldsets > div:nth-child(2n)
+	{
+		float: left;
+	}
+
+	.products-of-interest div
+	{
+		width: 100%;
+	}
+
+	.referForm .products-of-interest div
+	{
+		width: 32%;
+	}
+
+	iframe#requestQuote
+	{
+		height: 1550px; 
+	}
+
+
+	table#adp-placemark .adp-text,
+	.adp-placemark .adp-text
+	{
+		font-size: 14px;
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 480px)
+{
+	.directions .locationImage
+	{
+		display: none;
+	}
+
+	.directions .locationLeft 
+	{
+		width: 100%;
+	}
+
+	table#adp-placemark .adp-text,
+	.adp-placemark .adp-text
+	{
+		font-size: 12px;
+		width: 222px;
+	}
+
+	.referForm .products-of-interest div
+	{
+		width: 100%;
+	}
+}
+
