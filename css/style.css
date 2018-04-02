@@ -2821,3 +2821,9 @@ h3.location-title
   .sticky + .content {
 	padding-top: 107px;
   }
+
+.hidden {
+display: none;	
+}
+
+
