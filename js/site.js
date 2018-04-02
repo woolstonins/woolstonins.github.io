@@ -30,6 +30,7 @@ window.onscroll = function() {stickyheader()};
 // Get the header
 var header = document.getElementById("top_nav");
 var home_page = document.getElementById("home-page");
+var phone_scrolled = document.getElementById("phone_scrolled");
 
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
@@ -39,9 +40,11 @@ function stickyheader() {
   if (window.pageYOffset >= sticky) {
     header.classList.add("sticky");
     home_page.classList.add("stickied");
+      phone_scrolled.classList.remove("hidden");
   } else {
     header.classList.remove("sticky");
     home_page.classList.remove("stickied");
+      phone_scrolled.classList.add("hidden");
   }
 }
 
