@@ -21,32 +21,33 @@ jQuery(document).ready(function ($) {
             callback: function(index, elem) {},
             transitionEnd: function(index, elem) {}
           });
+    } else {
+        window.onscroll = function() {stickyheader()};
+
+        // Get the header
+        var header = document.getElementById("top_nav");
+        var home_page = document.getElementById("home-page");
+        var phone_scrolled = document.getElementById("phone_scrolled");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function stickyheader() {
+          if (window.pageYOffset >= sticky) {
+            header.classList.add("sticky");
+            home_page.classList.add("stickied");
+              phone_scrolled.classList.remove("hidden");
+          } else {
+            header.classList.remove("sticky");
+            home_page.classList.remove("stickied");
+              phone_scrolled.classList.add("hidden");
+          }
+        }
     }
 });
 
-// When the user scrolls the page, execute myFunction 
-window.onscroll = function() {stickyheader()};
 
-// Get the header
-var header = document.getElementById("top_nav");
-var home_page = document.getElementById("home-page");
-var phone_scrolled = document.getElementById("phone_scrolled");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyheader() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-    home_page.classList.add("stickied");
-      phone_scrolled.classList.remove("hidden");
-  } else {
-    header.classList.remove("sticky");
-    home_page.classList.remove("stickied");
-      phone_scrolled.classList.add("hidden");
-  }
-}
 
 // This example displays an address form, using the autocomplete feature
 // of the Google Places API to help users fill in the information.
