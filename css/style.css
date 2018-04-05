@@ -61,9 +61,9 @@ li {
 
 #home-page h1, #home-page h2 
 {
-	margin-bottom: 26px;
+	margin-bottom: 20px;
 	border-bottom: 1px solid #aea8a4;
-	padding-bottom: 11px;	
+	padding-bottom: 10px;	
 	font-size: 24px;
 	color: black;
 	font-weight: bold;
@@ -111,7 +111,7 @@ li {
 
 .location {
 	color: #454545;
-	margin-top: 10px;
+	/* margin-top: 10px; */
 }
 
 
@@ -129,8 +129,8 @@ li {
 	color: #505050;
 	background-color: #f0eeeb;
 	overflow: hidden;
-	padding-bottom: 88px;
-	margin-top: 50px;
+	padding-bottom: 0px;
+	margin-top: 0px;
 }
 
 .footer a{
@@ -369,9 +369,7 @@ form .button {
 }
 
 #home-page .locations {
-
 	background-color: white;
-
 }
 
 .homeContent
@@ -386,10 +384,7 @@ form .button {
 .location-phone
 {
 	padding-top: 10px;
-	margin-bottom: 30px;
 }
-
-
 
 .locationFloater
 {
@@ -1156,7 +1151,7 @@ display: none;
 
 	.locationFloater h4
 	{
-		margin-top: 19px;
+		margin-top: 10px;
 	}
 
 	.location-phone
@@ -1177,9 +1172,8 @@ display: none;
 
 	.office-hours span
 	{
-		width: 65px;
+		width: 100px;
 	}
-
 }
 
 @media (max-width: 410px)
