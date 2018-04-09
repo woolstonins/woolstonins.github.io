@@ -226,18 +226,16 @@ li {
 	text-decoration: none;
 }
 
-
-
 .phone-number
 {
-    	margin-top: 52px;
+    margin-top: 52px;
 	margin-bottom: 10px;
 	position: relative;
 	font-family: 'Source Sans Pro', Arial;
-	font-size: 32px;
-        float: right;
-        color: #0076c1;
-        font-weight: bold;
+	font-size: 24px;
+	float: right;
+	color: #0076c1;
+	font-weight: bold;
 	line-height: 29px;
 	text-align: center;
 }
@@ -246,13 +244,11 @@ li {
 {
 	display: inline;
 	text-align: center;
-        font-weight: 400;
+    font-weight: 400;
 	background-color: white;
-	font-size: 32px;
+	font-size: 24px;
 	color: #959595;
 }
-
-
 
 /****** locations page ******/
 
@@ -574,7 +570,7 @@ ul a{
 	width: 100%;
 }
 
-.get-a-quote .button
+.get-a-quote .button, .mobile.button 
 {
 	display: block;
 	font-family: 'Source Sans Pro', Arial;
@@ -681,11 +677,9 @@ ul a{
   }
 
 .hidden {
-display: none;	
+	display: none;	
 }
 
-
-/** maybe? **/
 @media (min-width: 856px) and (max-width: 1210px)
 {
 	.main 
@@ -1036,6 +1030,12 @@ display: none;
 
 @media (max-width: 480px)
 {
+	.container-fluid
+	{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
 	.lower .inner {
 		padding-top: 0px;
 	}
