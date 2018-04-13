@@ -1,0 +1,16 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+Disallow: /services/
+Disallow: /companies/
+Disallow: /contact/
+Disallow: /ryan/
+Disallow: /category/blog/
+Disallow: /category/uncategorized/
+Disallow: /blog/about-me/
+Disallow: /blog/nicole-hartvigsen/
+Disallow: /uncategorized/ryan-woolston/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.rjwinsurance.com/sitemap.xml
