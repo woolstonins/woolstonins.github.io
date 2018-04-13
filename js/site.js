@@ -9,18 +9,20 @@ jQuery(document).ready(function ($) {
 
     var window_width = $(window).width();
     if (window_width <= 420) {
-        $('.testimonial-rotator').addClass('swipe');
+        // $('.testimonial-rotator').addClass('swipe');
 
-        window.mySwipe = new Swipe(document.getElementById('slider'), {
-            startSlide: 2,
-            speed: 1000,
-            auto: 10000,
-            continuous: true,
-            disableScroll: false,
-            stopPropagation: false,
-            callback: function(index, elem) {},
-            transitionEnd: function(index, elem) {}
-          });
+        // window.mySwipe = new Swipe(document.getElementById('slider'), {
+        //     startSlide: 2,
+        //     speed: 1000,
+        //     auto: 10000,
+        //     continuous: true,
+        //     disableScroll: false,
+        //     stopPropagation: false,
+        //     callback: function(index, elem) {},
+        //     transitionEnd: function(index, elem) {}
+        //   });
+        var num_testimonials = $('.testimonial').length;
+        $('.testimonial').eq(0).css('display', 'block');
     } else {
         window.onscroll = function() {stickyheader()};
 
@@ -34,19 +36,18 @@ jQuery(document).ready(function ($) {
 
         // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function stickyheader() {
-          if (window.pageYOffset >= sticky) {
-            header.classList.add("sticky");
-            home_page.classList.add("stickied");
-              phone_scrolled.classList.remove("hidden");
-          } else {
-            header.classList.remove("sticky");
-            home_page.classList.remove("stickied");
-              phone_scrolled.classList.add("hidden");
-          }
+            if (window.pageYOffset >= sticky) {
+                header.classList.add("sticky");
+                home_page.classList.add("stickied");
+                phone_scrolled.classList.remove("hidden");
+            } else {
+                header.classList.remove("sticky");
+                home_page.classList.remove("stickied");
+                phone_scrolled.classList.add("hidden");
+            }
         }
     }
 });
-
 
 
 // This example displays an address form, using the autocomplete feature
@@ -119,7 +120,6 @@ function geolocate() {
                     autocomplete.setBounds(circle.getBounds());
                 });
             }
-
         }
     }
 }
