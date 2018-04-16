@@ -296,7 +296,7 @@ form .button {
 	width: 47%;
 	margin-right: 4%;
 }
-.location-phone {
+.location-phone, .location-email {
 	padding-top: 10px;
 }
 .locationFloater {
@@ -439,7 +439,7 @@ ul a{
 .get-a-quote {
 	display: none;
 
-	
+
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
 	bottom: 0;
 	color: white;
@@ -868,7 +868,7 @@ ul a{
 	.locationFloater h4 {
 		margin-top: 10px;
    }
-	.location-phone {
+	.location-phone, .location-email {
 		padding-top: 0px;
    }
 	#home-page .location-image, #home-page .locations-container .address, #home-page .location-info, .office-hours, #home-page .location-functions {
