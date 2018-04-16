@@ -757,6 +757,9 @@ ul a{
    }
 }
 @media (max-width: 480px) {
+	#home-page .locationFloater:first-child {
+		margin-bottom: 0px;
+	}
 	.center {
 		width: 360px;
 		max-width: 460px;
