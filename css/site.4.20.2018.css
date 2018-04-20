@@ -73,16 +73,15 @@ form h4 {
 	display:block;
 }
 
-form input {
+/* form input {
 	width: 90%; max-width: 300px;
 	height: 22px;
-}
+} */
 
 .checkbox {
 	display: inline;
-	height: 14px;
-	width: 15px;
-
+	/* height: 14px;
+	width: 15px; */
 }
 
 form .button {
@@ -172,11 +171,6 @@ form label{
 	margin-left: 30px;
 }
 
-
-.nav-container ul.top-product-list, .product-info {
-	
-}
-
 .nav-container .dropdown li, .nav-container .products li {
 	line-height: 30px;
 }
@@ -209,11 +203,11 @@ form label{
 }
 
 
-form input,
+/* form input,
 form, select
 {
 	margin-bottom: 9px;
-}
+} */
 
 .products-of-interest label
 {
@@ -533,3 +527,13 @@ div.sitemap > ul ul
 	}
 }
 
+.pac-container:after {
+    background-image: none !important;
+	height: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+#apartment_number, #spouse, #new_purchase_address {
+	display: none;
+}

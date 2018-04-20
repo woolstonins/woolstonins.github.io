@@ -2,15 +2,15 @@
 layout: default
 title: Ryan Woolson - Insurance for Utah
 ---
+<script src="js/site.4.17.2018.js" type="text/javascript" defer></script>
+
 <div class="topAreaOuter">
     <div class="container-fluid">
-        <div class="header row-fluid">
-            <div class="span5">
-                <a href="/" class="logo">
-                <img src="img/cottonwood_logo.jpg" />
-                </a>
+        <div class="header row-fluid row"><!--header row-fluid -->
+            <div class="col-md-5"><!--col-md-5-->
+                <a href="/" class="logo"><img src="img/cottonwood_logo.jpg" /></a>
             </div>
-            <div class="phone-number offset1 span6">
+            <div class="phone-number offset-md-1 col-md-5"><!--phone-number offset-md-1 col-md-5-->
                 <div class="phone-number-header">
                     Please contact me at 
                 </div>
@@ -57,7 +57,7 @@ title: Ryan Woolson - Insurance for Utah
     </div>
 </div>
 
-<div class="wrapper">
+<div class="wrapper" id="banner_wrapper">
     <div class="banner hlp-box-shadow">
         <div class="center">
             <div class="mobile button"><a href="mailto:ryanw@cottonwoodins.com">Email now</a></div>
@@ -87,56 +87,55 @@ title: Ryan Woolson - Insurance for Utah
     </div>
 </div>
         
-<div style="padding-bottom:0px">
-    <div class="inner center">
-        <div id="testimonialsection" class="testimonials">
-            <h2>Testimonials</h2>
-            <div id="slider" class="testimonial-rotator">
-                <div class="swipe-wrap">
-                    <div class="testimonial">
-                        <div class="testimonial-quote">
-                            Ryan set us up with the most fantastic policy. He always makes himself available for us regardless of how simple or complex our question or situation is. Our experience has been unbelievable and we will always use him as our agent.
-                        </div>
-                        <div class="testimonial-author">
-                            <br/>
-                            Nathan & Nicki
-                        </div>
+
+<div class="inner center">
+    <div id="testimonialsection" class="testimonials">
+        <h2>Testimonials</h2>
+        <div id="slider" class="testimonial-rotator">
+            <div class="swipe-wrap">
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        Ryan set us up with the most fantastic policy. He always makes himself available for us regardless of how simple or complex our question or situation is. Our experience has been unbelievable and we will always use him as our agent.
                     </div>
-                    <div class="testimonial">
-                        <div class="testimonial-quote">
-                            I moved to Salt Lake from California, and needed new insurance. Ryan saved me more than $1000 a year on my car insurance alone. And because I bundled it with my renter's insurance, I got another discount, which basically payed itself. Ryan was very knowledgable and helpful. I had a great experience.
-                        </div>
-                        <div class="testimonial-author">
-                            <br/>
-                            Joel and Angie
-                        </div>
+                    <div class="testimonial-author">
+                        <br/>
+                        Nathan & Nicki
                     </div>
-                    <div class="testimonial">
-                        <div class="testimonial-quote">
-                            I've worked with Ryan for a few years now and he's definitely the best insurance agent I've had. He's helped me through water damage at my house, changes in my car insurance, and following up when I've made changes. I know he's genuinely concerned about getting me the best help, rates, and service. Ryan is thorough and easy to talk with, easy to get in contact with, and returns calls quickly. He always makes me feel like I'm his most important client!
-                        </div>
-                        <div class="testimonial-author">
-                            <br/>
-                            Erika P.
-                        </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        I moved to Salt Lake from California, and needed new insurance. Ryan saved me more than $1000 a year on my car insurance alone. And because I bundled it with my renter's insurance, I got another discount, which basically payed itself. Ryan was very knowledgable and helpful. I had a great experience.
                     </div>
-                    <div class="testimonial">
-                        <div class="testimonial-quote">
-                            Ryan is a young, honest, friendly, out-going guy. Ryan is also local and will answer every question and concern that comes up.
-                        </div>
-                        <div class="testimonial-author">
-                            <br/>
-                            Linny
-                        </div>
+                    <div class="testimonial-author">
+                        <br/>
+                        Joel and Angie
                     </div>
-                    <div class="testimonial">
-                        <div class="testimonial-quote">
-                            Ryan just saved John and I $800 on our insurance (Cars, Boat, House)!  He's a lot better than that stupid gecko...
-                        </div>
-                        <div class="testimonial-author">
-                            <br/>
-                            Julie &amp; John
-                        </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        I've worked with Ryan for a few years now and he's definitely the best insurance agent I've had. He's helped me through water damage at my house, changes in my car insurance, and following up when I've made changes. I know he's genuinely concerned about getting me the best help, rates, and service. Ryan is thorough and easy to talk with, easy to get in contact with, and returns calls quickly. He always makes me feel like I'm his most important client!
+                    </div>
+                    <div class="testimonial-author">
+                        <br/>
+                        Erika P.
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        Ryan is a young, honest, friendly, out-going guy. Ryan is also local and will answer every question and concern that comes up.
+                    </div>
+                    <div class="testimonial-author">
+                        <br/>
+                        Linny
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-quote">
+                        Ryan just saved John and I $800 on our insurance (Cars, Boat, House)!  He's a lot better than that stupid gecko...
+                    </div>
+                    <div class="testimonial-author">
+                        <br/>
+                        Julie &amp; John
                     </div>
                 </div>
             </div>
@@ -144,11 +143,14 @@ title: Ryan Woolson - Insurance for Utah
     </div>
 </div>
 
+
 <div id="mainContentContainer">
     <div class="center">
         <div class="homeContent">
             <h1>Ryan's Bio</h1>
-            <div style="float:left;margin:0 10px 10px 0;width:35%;"><img src="img/ryan-woolston.jpg" /></div>
+            <div style="float:left;margin:0 10px 10px 0;width:35%;">
+                <img src="img/ryan-woolston.jpg" id="ryan" />
+            </div>
 
             {% include bio.html %}
         </div>
