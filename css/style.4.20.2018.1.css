@@ -407,7 +407,7 @@ ul a{
 	padding: 0;
 }
 .nav-container > ul > li{
-	display: block;
+	/* display: block; */
 	float: left;
 	height: 23px;
 	line-height: 26px;
