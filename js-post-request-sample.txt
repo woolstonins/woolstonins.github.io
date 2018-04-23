@@ -1,0 +1,30 @@
+var json_data = JSON.stringify({"wat":"yes"});
+$.ajax({
+    type: "POST", 
+    url: "http://z1freeride.pythonanywhere.com/home", 
+    data: json_data, 
+    dataType: "json", 
+    contentType: "application/json; charset=utf-8",
+    cache: false, 
+    success: function (result) {console.log(result);}, 
+    complete: function (xhr, textStatus) {console.log(textStatus);},
+    error: function (req, status, error) {console.log(error);}
+});
+
+//beforeSend: function (xhr) {
+    //},
+
+    //complete: function (jqXHR, textStatus) {
+    //},
+
+    headers: {'Authorization': 'Basic ' + 'd29vbHN0b25pbnM6d29vbHN0b24wOTg='}, 
+
+    xhrFields: {withCredentials: true}, 
+
+    beforeSend: function(xhr) { xhr.setRequestHeader("Authorization", "Basic d29vbHN0b25pbnM6d29vbHN0b24wOTg="); },
+
+        username: "woolstonins",
+    password: "woolston098",
+
+
+    crossDomain: true, 
