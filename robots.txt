@@ -9,6 +9,12 @@ Disallow: /category/uncategorized/
 Disallow: /blog/about-me/
 Disallow: /blog/nicole-hartvigsen/
 Disallow: /uncategorized/ryan-woolston/
+Disallow: /blog/testimonial-2/
+Disallow: /blog/erika-phillips/
+Disallow: /blog/denise-draper/
+Disallow: /blog/jason-oliver-3/
+Disallow: /blog/why-geico-sucks/
+Disallow: /blog/ryan-woolston-1/
 
 User-agent: *
 Allow: /

@@ -1,2 +1,5 @@
-name: Ryan Woolson
+name: Ryan Woolston
 markdown: kramdown
+
+plugins:
+  - jekyll-redirect-from
