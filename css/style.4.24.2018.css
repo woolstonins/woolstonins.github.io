@@ -950,3 +950,7 @@ ul a{
 		display: none;
    }
 }
+
+.form-check-label {
+    margin-bottom: 0;
+}
