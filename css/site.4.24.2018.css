@@ -95,10 +95,6 @@ form textarea {
 	height: 130px;
 }
 
-form label{
-	display: block;
-}
-
 .products-of-interest {
 	float:left;
 	background-color: #f6f6f6;
