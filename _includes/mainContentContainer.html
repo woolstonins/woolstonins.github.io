@@ -1,0 +1,87 @@
+<div id="mainContentContainer">
+    <div class="center">
+        <div class="homeContent">
+            <h1>Ryan's Bio</h1>
+            <div style="float:left;margin:0 10px 10px 0;width:35%;">
+                <img src="img/ryan-woolston.jpg" id="ryan" />
+            </div>
+
+            {% include bio.html %}
+            
+        </div>
+        <div class="locations">
+            <div class="locations-container">
+                <h2>Come visit me</h2>
+                <div class="locations-inner">
+                    <div class="location rotator-item">
+                        <div class="locationFloater">
+                            <div class="address">
+                                <h4>Cottonwood Insurance</h4>
+                                2028 Fort Union Blvd<br />
+                                Cottonwood Heights, UT 84121
+                                <div class="location-phone">
+                                    <h4>Phone:</h4>
+                                    <span>Office: </span>801&ndash;943&ndash;5700<br />
+                                    <span>Cell: </span><a href="tel:801-231-7671">801&ndash;231&ndash;7671</a><br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="locationFloater">
+                            <div class="office-hours">
+                                <h4>Office Hours:</h4>
+                                <span>Mon &ndash; Fri:</span> 
+                                9AM &ndash; 5PM<br />
+                                <span>Eve &amp; Sat:</span> 
+                                By Appointment<br />
+                                <div class="location-email">
+                                    <h4>Email:</h4>
+                                    <span><a href="mailto:ryanw@cottonwoodins.com">ryanw@cottonwoodins.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="application/ld+json">
+                        {  
+                            "@context":"http://schema.org",
+                            "@type":"LocalBusiness",
+                            "name":"Ryan Woolston Insurance",
+                            "address":{  
+                                "@type":"PostalAddress",
+                                "streetAddress":"2028 Fort Union Blvd",
+                                "addressLocality":"Cottonwood Heights",
+                                "addressRegion":"UT",
+                                "postalCode":"84121",
+                                "addressCountry":"US"
+                            },
+                            "url":"",
+                            "telephone":"801-231-7671",
+                            "openingHoursSpecification": [
+                                {
+                                    "@type": "OpeningHoursSpecification",
+                                    "dayOfWeek": [
+                                    "Monday 9:00 AM-5:00 PM",
+                                    "Tuesday 9:00 AM-5:00 PM",
+                                    "Wednesday 9:00 AM-5:00 PM",
+                                    "Thursday 9:00 AM-5:00 PM",
+                                    "Friday 9:00 AM-5:00 PM"
+                                    ],
+                                    "opens": "",
+                                    "closes": ""
+                                },
+                                {
+                                    "@type": "OpeningHoursSpecification",
+                                    "dayOfWeek": [
+                                    "Saturday Closed",
+                                    "Sunday Closed"
+                                    ],
+                                    "opens": "",
+                                    "closes": ""
+                                }
+                            ]
+                        }
+                    </script>        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
