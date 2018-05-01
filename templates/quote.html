@@ -10,26 +10,26 @@
       <link href='https://fonts.googleapis.com/css?family=Oswald%7COpen+Sans:400,300%7C' rel="stylesheet" type="text/css" />
       <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,300,700' rel="stylesheet" type="text/css" />
 
-      <link href="https://www.rjwinsurance.com/js/jquery/jscrollpane/css/jquery.jscrollpane.css" type="text/css" rel="stylesheet" media="all" />
+      <link href="js/jquery/jscrollpane/css/jquery.jscrollpane.css" type="text/css" rel="stylesheet" media="all" />
 
-      <link href="https://www.rjwinsurance.com/js/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
-      <link href="https://www.rjwinsurance.com/css/cssreset-min.css" rel="stylesheet" type="text/css"/>
+      <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+      <link href="css/cssreset-min.css" rel="stylesheet" type="text/css"/>
 
-      <link href="https://www.rjwinsurance.com/css/bs4/bootstrap.min.css" rel="stylesheet" media="screen" />
+      <link href="css/bs4/bootstrap.min.css" rel="stylesheet" media="screen" />
 
-      <link href="https://www.rjwinsurance.com/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+      <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
 
-      <link href="https://www.rjwinsurance.com/css/site.4.24.2018.css" rel="stylesheet" type="text/css"/>
-      <link href="https://www.rjwinsurance.com/css/style.4.24.2018.css" rel="stylesheet" type="text/css" media="all">
+      <link href="css/site.4.24.2018.css" rel="stylesheet" type="text/css"/>
+      <link href="css/style.4.24.2018.css" rel="stylesheet" type="text/css" media="all">
 
-      <script src="https://www.rjwinsurance.com/js/jquery.min.js" type="text/javascript"></script>
-      <script src="https://www.rjwinsurance.com/js/swipe.js" type="text/javascript"></script>
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <script src="js/swipe.js" type="text/javascript"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQwAGCqyyt16d1g-uVvD4LLoaBtqoqS_o&libraries=places" type="text/javascript"></script>
 
-      <script src="https://www.rjwinsurance.com/js/jquery/jscrollpane/jquery.jscrollpane.min.js" type="text/javascript" defer></script>
-      <script src="https://www.rjwinsurance.com/js/jquery/backstretch/jquery.backstretch.min.js" type="text/javascript" defer></script>
-      <script src="https://www.rjwinsurance.com/js/plugins.js" type="text/javascript" defer></script>
-      <script src="https://www.rjwinsurance.com/js/jquery.jpanelmenu.min.js" type="text/javascript" defer></script>
+      <script src="js/jquery/jscrollpane/jquery.jscrollpane.min.js" type="text/javascript" defer></script>
+      <script src="js/jquery/backstretch/jquery.backstretch.min.js" type="text/javascript" defer></script>
+      <script src="js/plugins.js" type="text/javascript" defer></script>
+      <script src="js/jquery.jpanelmenu.min.js" type="text/javascript" defer></script>
 
       {% if styles is defined %}
         <style type="text/css">
@@ -50,18 +50,21 @@
                     $('#apartment_number').css('display', 'block');
                     $('#estimated_value').css('display', 'none');
                 });
+
+                $('#new_purchase-0').on('click', function(){
+                    //show new_purchase_address
+                    $('#new_purchase_address').css('display', 'block');
+                });
+                $('#new_purchase-1').on('click', function(){
+                    //hide new_purchase_address
+                    $('#new_purchase_address').css('display', 'none');
+                });
+
                 $('#married').on('click', function(){
                     if ($(this).attr('checked')) {
                         $('#spouse').css('display', 'block');
                     } else {
                         $('#spouse').css('display', 'none');
-                    }
-                });
-                $('#new_purchase').on('click', function(){
-                    if ($(this).attr('checked')) {
-                        $('#new_purchase_address').css('display', 'block');
-                    } else {
-                        $('#new_purchase_address').css('display', 'none');
                     }
                 });
             });
@@ -177,8 +180,76 @@
             {% endif %}
         {% endwith %}
         <form action="./home" method="POST">
+            <!-- Start of first page -->
+            <div data-role="page" id="new_purchase_page">
+
+                    <div data-role="header">
+                        <h1>Foo</h1>
+                    </div><!-- /header -->
+                
+                    <div role="main" class="ui-content">
+                        <p>I'm first in the source order so I'm shown as the page.</p>
+                        <p>View internal page called <a href="#bar">bar</a></p>
+                    </div><!-- /content -->
+                
+                    <div data-role="footer">
+                        <h4>Page Footer</h4>
+                    </div><!-- /footer -->
+                </div><!-- /page -->
+                
+                <!-- Start of second page -->
+                <div data-role="page" id="bar">
+                
+                    <div data-role="header">
+                        <h1>Bar</h1>
+                    </div><!-- /header -->
+                
+                    <div role="main" class="ui-content">
+                        <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+                        <p><a href="#foo">Back to foo</a></p>
+                    </div><!-- /content -->
+                
+                    <div data-role="footer">
+                        <h4>Page Footer</h4>
+                    </div><!-- /footer -->
+                </div><!-- /page -->
             {{ form.csrf }}
             <input type="hidden" value="{{agent}}" id="agent" name="agent">
+
+            <div class="form-check">
+                {{ form.new_purchase }}
+            </div>
+
+            <div id="new_purchase_address">
+                <div class="form-group mb-3">
+                    {{ form.autocomplete_new_purchase.label }}
+                    {{ form.autocomplete_new_purchase(class_="form-control col-lg-9", onFocus="geolocate()") }}
+                    <div class="invalid-feedback">Your new address is required.</div>
+                </div>
+
+                <div class="form-group mb-3" id="estimated_value">
+                    {{ form.newhomevalue.label }}
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        {{ form.newhomevalue(class_="form-control col-lg-7") }}
+                        <div class="invalid-feedback">The estimated value is required.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-4">
+                {{ form.autocomplete.label }}
+                {{ form.autocomplete(class_="form-control col-lg-9", onFocus="geolocate()") }}
+                <div class="invalid-feedback">Your current address is required.</div>
+            </div>
+
+            <div class="form-check">
+                {{ form.own_rent }}
+            </div>
+
+
             <div class="form-group mb-3">
                 {{ form.email.label }}
                 {{ form.email(class="form-control ") }}
@@ -240,15 +311,9 @@
                 </div>
             </div>
 
-            <div class="form-group mb-4">
-                {{ form.autocomplete.label }}
-                {{ form.autocomplete(class_="form-control col-lg-9", onFocus="geolocate()") }}
-                <div class="invalid-feedback">Your address is required.</div>
-            </div>
+            
 
-            <div class="form-check">
-                {{ form.own_rent }}
-            </div>
+            
 
             <!--<div class="form-check mb-3">-->
             <!--    <input id="renting" name="own_rent" value="rent" type="radio" class="form-check-input">-->
@@ -272,18 +337,9 @@
                 {{ form.aptunit(class_="form-control col-lg-3", placeholder="#") }}
             </div>
 
-            <div class="form-group mb-3">
-                {{ form.new_purchase.label }}
-                <div class="input-group col-9 col-lg-6">
-                    {{ form.new_purchase(class_="form-control") }} <label for="new_purchase">Yes, I have a prior address</label>
-                </div>
-            </div>
+            
 
-            <div class="form-group mb-3" id="new_purchase_address">
-                {{ form.autocomplete_new_purchase.label }}
-                {{ form.autocomplete_new_purchase(class_="form-control col-lg-9", onFocus="geolocate()") }}
-                <div class="invalid-feedback">Your prior address is required.</div>
-            </div>
+            
 
             <button type="submit" class="btn btn-primary">Continue</button>
         </form>

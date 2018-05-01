@@ -17,12 +17,13 @@ class HomeQuote(Form):
     spouse_first_name = TextField("Spouse's First Name:")
     spouse_last_name = TextField("Spouse's Last Name:")
     spouse_birthdate = DateField("Spouse's Birthdate:")
-    autocomplete = TextField('Address:')
-    own_rent = RadioField('', choices=[('own','I own this home/condo'),('rent','I am renting')], default='own')
+    autocomplete = TextField('What is your current address?')
+    own_rent = RadioField('', choices=[('own','I own my current home'),('rent','I am renting')], default='own')
     homevalue = TextField('Estimated Value of your home (or loan amount):') #, validators=[validators.required()])
+    newhomevalue = TextField('What is the purchase price?') #, validators=[validators.required()])
     aptunit = TextField('Apartment Number (if applicable)')
-    new_purchase = BooleanField('Is this a new purchase/rental?')
-    autocomplete_new_purchase = TextField('Prior Address')
+    new_purchase = RadioField('', choices=[('new','Are you purchasing a new home?'),('current','I want a quote for my current address')], default='current') #BooleanField('Is this a new purchase/rental?')
+    autocomplete_new_purchase = TextField('What is the address of your new home?')
 
 @app.route("/home", methods = ["POST", "GET"])
 def home():
