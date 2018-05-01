@@ -6,7 +6,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
-app.config['SECRET_KEY'] = 'quomation-sucks-7662'
+app.config['SECRET_KEY'] = ''
 
 class HomeQuote(Form):
     email = TextField('Email Address:') #, validators=[validators.required()])
@@ -102,7 +102,7 @@ def home():
         invalid += "okay"
 
         if invalid == "okay":
-            m = Mailin("https://api.sendinblue.com/v2.0", "JqkVOEGWUhXnwFc3")
+            m = Mailin("https://api.sendinblue.com/v2.0", "")
             data = {
                 "to": {str(form.email.data):str(form.first_name.data)},
                 "from": ["freequote@utahinsurance.info", "Ryan Woolston"],
