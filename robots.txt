@@ -22,6 +22,9 @@ Disallow: /blog/linny-the-loan-officer/
 Disallow: /blog/mark-and-ladawn-k/
 Disallow: /blog/nathan-and-nicki/
 Disallow: /blog/ryan-and-whitney-g/
+Disallow: /blog/jeff-and-rebecca-h-2/
+Disallow: /blog/julie-edison-with-modern-elixer/
+Disallow: /blog/does-my-auto-policy-cover-me-when-i-rent-a-car/
 
 User-agent: *
 Allow: /
