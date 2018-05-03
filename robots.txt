@@ -4,11 +4,14 @@ Disallow: /services/
 Disallow: /companies/
 Disallow: /contact/
 Disallow: /ryan/
+Disallow: /category/
 Disallow: /category/blog/
 Disallow: /category/uncategorized/
+Disallow: /uncategorized/
+Disallow: /uncategorized/ryan-woolston/
+Disallow: /blog/
 Disallow: /blog/about-me/
 Disallow: /blog/nicole-hartvigsen/
-Disallow: /uncategorized/ryan-woolston/
 Disallow: /blog/testimonial-2/
 Disallow: /blog/erika-phillips/
 Disallow: /blog/denise-draper/
