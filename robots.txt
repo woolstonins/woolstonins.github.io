@@ -15,6 +15,13 @@ Disallow: /blog/denise-draper/
 Disallow: /blog/jason-oliver-3/
 Disallow: /blog/why-geico-sucks/
 Disallow: /blog/ryan-woolston-1/
+Disallow: /blog/cottonwood-insurance/
+Disallow: /blog/joel-and-angie/
+Disallow: /blog/ken-and-elizabeth-strong/
+Disallow: /blog/linny-the-loan-officer/
+Disallow: /blog/mark-and-ladawn-k/
+Disallow: /blog/nathan-and-nicki/
+Disallow: /blog/ryan-and-whitney-g/
 
 User-agent: *
 Allow: /
