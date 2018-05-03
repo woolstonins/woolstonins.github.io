@@ -4,26 +4,38 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 from wtforms.fields.html5 import DateField
 from datetime import datetime
 
-app = Flask(__name__)
-app.config["DEBUG"] = True
-app.config['SECRET_KEY'] = ''
+#app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='')
+
+app.config['SECRET_KEY'] = 'quomation_sucks_7662'
 
 class HomeQuote(Form):
     email = TextField('Email Address:') #, validators=[validators.required()])
     first_name = TextField('First Name:') #, validators=[validators.required()])
     last_name = TextField('Last Name:') #, validators=[validators.required()])
     birthdate = DateField('Birthdate:') #, validators=[validators.required()])
-    married = BooleanField('Are you married?')
+    
+    married = RadioField('', choices=[('married','Yes, I am married or I need another person to be on my policy'),('single',"No, I am single")]) #BooleanField('Is this a new purchase/rental?')
     spouse_first_name = TextField("Spouse's First Name:")
     spouse_last_name = TextField("Spouse's Last Name:")
     spouse_birthdate = DateField("Spouse's Birthdate:")
     autocomplete = TextField('What is your current address?')
     own_rent = RadioField('', choices=[('own','I own my current home'),('rent','I am renting')], default='own')
-    homevalue = TextField('Estimated Value of your home (or loan amount):') #, validators=[validators.required()])
+    homevalue = TextField('Estimated value of your home:') #, validators=[validators.required()])
     newhomevalue = TextField('What is the purchase price?') #, validators=[validators.required()])
     aptunit = TextField('Apartment Number (if applicable)')
-    new_purchase = RadioField('', choices=[('new','Are you purchasing a new home?'),('current','I want a quote for my current address')], default='current') #BooleanField('Is this a new purchase/rental?')
+    new_purchase = RadioField('', choices=[('new','Yes, please quote my new home!'),('current',"No, I'm looking for a better rate at my current address")]) #BooleanField('Is this a new purchase/rental?')
     autocomplete_new_purchase = TextField('What is the address of your new home?')
+
+@app.route("/m/home", methods = ["POST", "GET"])
+def home_mobile():
+    if request.method == 'POST':
+        form = HomeQuote(request.form, csrf_enabled=False)
+        agent = request.form['agent']
+    else:
+        agent = request.args.get('agent')
+        form = HomeQuote(request.form)
+        return render_template("quote_mobile.html", form=form, agent=agent)
 
 @app.route("/home", methods = ["POST", "GET"])
 def home():
@@ -34,7 +46,16 @@ def home():
 
         invalid = ""
         styles = ""
+        scripts = ""
         html = "<p>Completed home quote</p>"
+
+        if form.new_purchase.data == "new":
+            styles += " #new_purchase_address{display:block;} #current_estimated_value{display:none;} "
+            html += "<p>New purchase? " + str(form.new_purchase.data) + "</p>"
+            if form.autocomplete_new_purchase.data == "":
+                invalid += "autocomplete_new_purchase,"
+            else:
+                html += "<p>Prior Address: " + str(form.autocomplete_new_purchase.data) + "</p>"
 
         if form.first_name.data == "":
             invalid += "first_name,"
@@ -58,7 +79,7 @@ def home():
             invalid += "birthdate,"
 
         if form.married.data:
-            styles = " #spouse{display:block;} "
+            styles += " #spouse{display:block;} "
             html += "<p>Married? " + str(form.married.data) + "</p>"
             if form.spouse_first_name.data == "":
                 invalid += "spouse_first_name,"
@@ -90,33 +111,26 @@ def home():
             html += "<p>Home value: " + str(form.homevalue.data) + "</p>"
 
         # html += "<p>Apt Unit: " + str(form.aptunit.data) + "</p>"
-        
-        if form.new_purchase.data:
-            styles += " #new_purchase_address{display:block;} "
-            html += "<p>New purchase? " + str(form.new_purchase.data) + "</p>"
-            if form.autocomplete_new_purchase.data == "":
-                invalid += "autocomplete_new_purchase,"
-            else:
-                html += "<p>Prior Address: " + str(form.autocomplete_new_purchase.data) + "</p>"
-
 
         invalid += "okay"
 
+        print(styles)
+
         if invalid == "okay":
-            m = Mailin("https://api.sendinblue.com/v2.0", "")
-            data = {
-                "to": {str(form.email.data):str(form.first_name.data)},
-                "from": ["freequote@utahinsurance.info", "Ryan Woolston"],
-                "subject": "Free Home Quote",
-                "html": html
-            }
-            result = m.send_email(data)
-            print(result)
+            # m = Mailin("https://api.sendinblue.com/v2.0", "")
+            # data = {
+            #     "to": {str(form.email.data):str(form.first_name.data)},
+            #     "from": ["freequote@utahinsurance.info", "Ryan Woolston"],
+            #     "subject": "Free Home Quote",
+            #     "html": html
+            # }
+            # result = m.send_email(data)
+            # print(result)
             return render_template("home_complete.html")
         else:
             flash('All fields are required.')
             invalids = invalid.split(',')
-            return render_template("quote.html", form=form, agent=agent, invalids=invalids, styles=styles)
+            return render_template("quote.html", form=form, agent=agent, invalids=invalids, styles=styles, scripts=scripts)
         
     else:
         agent = request.args.get('agent')
@@ -135,4 +149,4 @@ def home_complete():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
