@@ -63,7 +63,7 @@
                 // Create the autocomplete object, restricting the search to geographical
                 // location types.
                 autocomplete = new google.maps.places.Autocomplete(
-                /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+                /** @type {!HTMLInputElement} */(document.getElementById('current_address')),
                 {types: ['geocode']});
 
                 autocomplete2 = new google.maps.places.Autocomplete(
@@ -226,7 +226,7 @@
             
                 <div role="main" class="ui-content">
                     <div>
-                        {{ form.autocomplete(onFocus="geolocate()") }}
+                        {{ form.current_address(onFocus="geolocate()") }}
                     </div>
                     
                 </div><!-- /content -->
