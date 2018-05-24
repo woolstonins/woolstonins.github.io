@@ -16,13 +16,20 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-class Quote(db.Model):
+class quotes(db.Model):
     __tablename__ = "quotes"
     quoteid = db.Column(db.Integer, primary_key=True)
-    type = db.Column(db.String(25))
+    quotetype = db.Column(db.String(25))
     email = db.Column(db.String(250))
     birthdate = db.Column(db.String(250))
     quote = db.Column(db.Text)
+
+    def __init__(self, quoteid, quotetype, email, birthdate, quote):
+        self.quoteid = quoteid
+        self.quotetype = quotetype
+        self.email = email
+        self.birthdate = birthdate
+        self.quote = quote
     
 
 class HomeQuote(Form):
@@ -63,7 +70,7 @@ def process_home(form):
     result = m.send_email(data)
 
     id = int(datetime.now().strftime('%Y%m%d%H%M%S'))
-    q = Quote(id, "HOME", f.email.data, f.birthdate.data, d)
+    q = quotes(id, "HOME", f.email.data, f.birthdate.data, d)
     db.session.add(d)
     db.session.commit()
 
