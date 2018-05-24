@@ -67,7 +67,7 @@
                 {types: ['geocode']});
 
                 autocomplete2 = new google.maps.places.Autocomplete(
-                /** @type {!HTMLInputElement} */(document.getElementById('autocomplete_new_purchase')),
+                /** @type {!HTMLInputElement} */(document.getElementById('new_address')),
                 {types: ['geocode']});
 
                 // When the user selects an address from the dropdown, populate the address
@@ -158,7 +158,7 @@
                     $('#about_you_prev').attr('href', '#purchase_price');
                 });
                 $('#go_to_current_address').on('click', function(){
-                    $('#autocomplete_new_purchase').val('');
+                    $('#new_address').val('');
                     $('#current_address_prev').attr('href','#first_page');
                     $('#current_address_next').attr('href', '#current_home_value');
                     $('#about_you_prev').attr('href', '#current_home_value');
@@ -201,7 +201,7 @@
             
                 <div role="main" class="ui-content">
                     <div id="new_purchase_address">
-                        {{ form.autocomplete_new_purchase(onFocus="geolocate()") }}
+                        {{ form.new_address(onFocus="geolocate()") }}
                     </div>
                     
                 </div><!-- /content -->
@@ -352,7 +352,8 @@
                     <h4>
                         <p>
                             <a href="#married" id="partner_prev" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">&larr; Go Back</a>
-                            <a href="#done" id="partner_next" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Next &rarr; </a>
+                            <!-- <a href="#done" id="partner_next" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Next &rarr; </a> -->
+                            <button type="submit" class="ui-btn ui-shadow ui-corner-all">Continue</button>
                         </p>
                     </h4>
                 </div>
