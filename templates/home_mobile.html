@@ -153,7 +153,7 @@
 
             jQuery(document).ready(function ($) {
                 $('#go_to_new_purchase_address').on('click', function(){
-                    $('#current_address_prev').attr('href','#new_address');
+                    $('#current_address_prev').attr('href','#new');
                     $('#current_address_next').attr('href', '#purchase_price');
                     $('#about_you_prev').attr('href', '#purchase_price');
                 });
@@ -162,7 +162,7 @@
                     $('#current_address_prev').attr('href','#first_page');
                     $('#current_address_next').attr('href', '#current_home_value');
                     $('#about_you_prev').attr('href', '#current_home_value');
-                    $('#current_home_value_prev').attr('href','#current_address');
+                    $('#current_home_value_prev').attr('href','#current');
                 });                
             });
         </script>
@@ -188,12 +188,12 @@
                 </div>
             
                 <div role="main" class="ui-content">
-                    <p><a href="#new_address" id="go_to_new_purchase_address" class="ui-btn ui-shadow ui-corner-all">Yes, quote my new home!</a></p>
-                    <p><a href="#current_address" id="go_to_current_address" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">No, I'm looking for a better rate at my current address</a></p>
+                    <p><a href="#new" id="go_to_new_purchase_address" class="ui-btn ui-shadow ui-corner-all">Yes, quote my new home!</a></p>
+                    <p><a href="#current" id="go_to_current_address" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">No, I'm looking for a better rate at my current address</a></p>
                 </div>
             </div><!-- /page -->
                 
-            <div data-role="page" id="new_address" data-theme="a" data-url="new_address">
+            <div data-role="page" id="new" data-theme="a" data-url="new">
                 
                 <div data-role="header">
                     <h1>What is your new address?</h1>
@@ -210,7 +210,7 @@
                     <h4>
                         <p>
                             <a href="#first_page" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">&larr; Go Back</a>
-                            <a href="#current_address" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Next &rarr; </a>
+                            <a href="#current" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Next &rarr; </a>
                         </p>
                     </h4>
 
@@ -218,7 +218,7 @@
             </div><!-- /page -->
 
             <!-- Start of second page -->
-            <div data-role="page" id="current_address" data-theme="a" data-url="current_address">
+            <div data-role="page" id="current" data-theme="a" data-url="current">
                 
                 <div data-role="header">
                     <h1>What is your current address?</h1>
@@ -257,7 +257,7 @@
                 <div data-role="footer">
                     <h4>
                         <p>
-                            <a href="#current_address" id="purchase_price_prev" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">&larr; Go Back</a>
+                            <a href="#current" id="purchase_price_prev" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">&larr; Go Back</a>
                             <a href="#about_you" id="purchase_price_next" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Next &rarr; </a>
                         </p>
                     </h4>
