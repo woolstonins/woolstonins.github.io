@@ -177,7 +177,7 @@
                 </ul>
             {% endif %}
         {% endwith %}
-        <form action="./m/home" method="POST">
+        <form action="/m/home" method="POST" data-ajax="false">
             {{ form.csrf }}
             <input type="hidden" value="{{agent}}" id="agent" name="agent">
 
@@ -321,7 +321,9 @@
 
                 <div role="main" class="ui-content">
                     <p><a href="#partner" id="" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Yes, I am married or I have a domestic partner</a></p>
-                    <p><a href="#done" id="" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">No, I am the only person on the policy</a></p>
+                    <p>
+                        <button type="submit" data-theme="b" name="submit" value="submit-value" class="ui-btn ui-shadow ui-corner-all" aria-disabled="false" style="white-space: normal;">No, I am the only person on the policy</button>
+                    </p>
                 </div>
 
                 <div data-role="footer">
@@ -353,7 +355,8 @@
                         <p>
                             <a href="#married" id="partner_prev" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">&larr; Go Back</a>
                             <!-- <a href="#done" id="partner_next" class="ui-btn ui-shadow ui-corner-all" style="white-space: normal;">Next &rarr; </a> -->
-                            <button type="submit" class="ui-btn ui-shadow ui-corner-all">Continue</button>
+                            <!-- <button type="submit" class="ui-btn ui-shadow ui-corner-all">Continue</button> -->
+                            <button type="submit" data-theme="b" name="submit" value="submit-value" class="" aria-disabled="false" >Submit</button>
                         </p>
                     </h4>
                 </div>
